@@ -1,0 +1,27 @@
+<div class="container" [formGroup]="form">
+  <label>Name</label>
+  <input formControlName="name" type="text" />
+  <label>Age</label>
+  <input formControlName="age" type="number" />
+  <!-- <ng-container formArrayName="technologyStack">
+    <ng-container
+      *ngFor="let controls of technologyStack.controls;let i=index;"
+    >
+      <div [formGroup]="controls">
+        <label>Technology</label>
+        <input formControlName="title" type="text" />
+        <label>Details</label>
+        <input formControlName="description" type="text" />
+        <button (click)="deleteTechnology(i)">
+          delete
+        </button>
+        <input />
+      </div>
+    </ng-container>
+  </ng-container> -->
+</div>
+<div class="group-action">
+  <button (click)="addDynamicControl()">
+    Add Control
+  </button>
+</div>
