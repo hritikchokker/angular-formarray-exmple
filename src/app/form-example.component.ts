@@ -20,7 +20,7 @@ export class FormExampleComponent {
   }
 
   get technologyStack() {
-    return this.form.controls["technologyStack"] as FormArray;
+    return this.form.controls["technologyStack"];
   }
 
   addDynamicControl() {
