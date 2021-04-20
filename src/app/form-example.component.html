@@ -4,9 +4,7 @@
   <label>Age</label>
   <input formControlName="age" type="number" />
   <ng-container formArrayName="technologyStack">
-    <ng-container
-      *ngFor="let controls of technologyStack.controls;let i=index;"
-    >
+    <ng-container *ngFor="let controls of technologyStack.controls;let i=index;">
       <div [formGroup]="controls">
         <label>Technology</label>
         <input formControlName="title" type="text" />
@@ -21,12 +19,9 @@
 </div>
 <div class="group-action">
   <button (click)="addDynamicControl()">
-    Add New
-  </button>
-  <button (click)="addDynamicControl()">
-    Submit
+    Add technology stack
   </button>
 </div>
-<div *ngIf="form.valid">
+<div *ngIf="form.value">
   {{form.value |json}}
 </div>

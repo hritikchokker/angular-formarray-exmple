@@ -26,7 +26,7 @@ export class FormExampleComponent {
   addDynamicControl() {
     const controlaDD = this._fb.group({
       title: ["", Validators.required],
-      description: ["beginner", Validators.required]
+      description: ["description", Validators.required]
     });
     console.log(controlaDD, "sss");
     this.technologyStack.push(controlaDD);
